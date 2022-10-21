@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":preserveSemverRanges"
+  ],
+  "rebaseWhen": "conflicted",
+  "hostRules": [
+    {
+      "hostType": "git-tags",
+      "matchHost": "https://github.com/plhw",
+      "encrypted": {
+        "token": "wcFMA7CNLw51im1DARAAxm+4RZSo3/I0rIwfNeL4SdYUHEf8OyQad5EAA4eplWsxcoRoWQWDGKcOOjZZ1fxpIuaX9E+lUsvGqE5jV7mtBWyK80CC9plfOd+oLfagD8bjDuiMaNzxj5ZVxukzWTgW72N0zQ62dFKzHqRmKGbgaFgYX+/Re4x3gcOJ3sWShUY41uUIRWPgX8HCJhtViM1bYvdndsuR8+1MpaW6BobK8xtkTeZeCN/Otfa2CFPBv/+gvLS8fzqd7o9Ybupd4nQRRcpt4sHUXLYURbzGRaIOIl1bGiBESrrgtxfGc26FZcUIEssQPOXzYYObSaDysapD6msGqgEBm2Bl7owrKFX9PD3HzGQiG1M/K8YZk6M1LF9DTRtqtvi93VKW8ABH5DVQxTVNy7JowI3vc/0TmOr9G5roqJ/XUPQenF24XDho6iKoYp/Pd7SscvgKiUJzQnzya5REb32vVTPUm/0Ejy2JnuKXiFg79qq7ONMhQAUsnwwz1LKbQ8ptZKPvzUwBFWFg93r39WDlgrVe2v0NCuhwmbD7ETnS5y6nT0AHXndEy8B+Ym+eeED+3UUklfYZad04DSj3RKQf9YtOfmKXcL7MGHaEH/DVR22gaq8+l6tz62dOeHk2yzGBXfNXqFeuAaHhWngkDu37oFEd7rCbks+Kwge8GuZfhYw3V1IJss7mZqXScwE9ahchtAjMNstrN1KJbkK35z/facdWtNU5m6xH4lXuWV2yzgQfAbzGFEu567l0xinl4rOHxW9XBG2bF2FLQZ6etxjQQJh2yHqzji3ppnPvTYzYC4VX1uasWA1Wjq05DgW5WDqeJpO7m2KES9jB99xrW8A"
+      }
+    },
+    {
+      "hostType": "docker-compose",
+      "matchHost": "https://ghcr.io/plhw",
+      "username": "basz",
+      "encrypted": {
+        "token": "wcFMA7CNLw51im1DARAAxm+4RZSo3/I0rIwfNeL4SdYUHEf8OyQad5EAA4eplWsxcoRoWQWDGKcOOjZZ1fxpIuaX9E+lUsvGqE5jV7mtBWyK80CC9plfOd+oLfagD8bjDuiMaNzxj5ZVxukzWTgW72N0zQ62dFKzHqRmKGbgaFgYX+/Re4x3gcOJ3sWShUY41uUIRWPgX8HCJhtViM1bYvdndsuR8+1MpaW6BobK8xtkTeZeCN/Otfa2CFPBv/+gvLS8fzqd7o9Ybupd4nQRRcpt4sHUXLYURbzGRaIOIl1bGiBESrrgtxfGc26FZcUIEssQPOXzYYObSaDysapD6msGqgEBm2Bl7owrKFX9PD3HzGQiG1M/K8YZk6M1LF9DTRtqtvi93VKW8ABH5DVQxTVNy7JowI3vc/0TmOr9G5roqJ/XUPQenF24XDho6iKoYp/Pd7SscvgKiUJzQnzya5REb32vVTPUm/0Ejy2JnuKXiFg79qq7ONMhQAUsnwwz1LKbQ8ptZKPvzUwBFWFg93r39WDlgrVe2v0NCuhwmbD7ETnS5y6nT0AHXndEy8B+Ym+eeED+3UUklfYZad04DSj3RKQf9YtOfmKXcL7MGHaEH/DVR22gaq8+l6tz62dOeHk2yzGBXfNXqFeuAaHhWngkDu37oFEd7rCbks+Kwge8GuZfhYw3V1IJss7mZqXScwE9ahchtAjMNstrN1KJbkK35z/facdWtNU5m6xH4lXuWV2yzgQfAbzGFEu567l0xinl4rOHxW9XBG2bF2FLQZ6etxjQQJh2yHqzji3ppnPvTYzYC4VX1uasWA1Wjq05DgW5WDqeJpO7m2KES9jB99xrW8A"
+      }
+    },
+    {
+      "hostType": "docker",
+      "matchHost": "https://ghcr.io/plhw",
+      "username": "basz",
+      "encrypted": {
+        "token": "wcFMA7CNLw51im1DARAAxm+4RZSo3/I0rIwfNeL4SdYUHEf8OyQad5EAA4eplWsxcoRoWQWDGKcOOjZZ1fxpIuaX9E+lUsvGqE5jV7mtBWyK80CC9plfOd+oLfagD8bjDuiMaNzxj5ZVxukzWTgW72N0zQ62dFKzHqRmKGbgaFgYX+/Re4x3gcOJ3sWShUY41uUIRWPgX8HCJhtViM1bYvdndsuR8+1MpaW6BobK8xtkTeZeCN/Otfa2CFPBv/+gvLS8fzqd7o9Ybupd4nQRRcpt4sHUXLYURbzGRaIOIl1bGiBESrrgtxfGc26FZcUIEssQPOXzYYObSaDysapD6msGqgEBm2Bl7owrKFX9PD3HzGQiG1M/K8YZk6M1LF9DTRtqtvi93VKW8ABH5DVQxTVNy7JowI3vc/0TmOr9G5roqJ/XUPQenF24XDho6iKoYp/Pd7SscvgKiUJzQnzya5REb32vVTPUm/0Ejy2JnuKXiFg79qq7ONMhQAUsnwwz1LKbQ8ptZKPvzUwBFWFg93r39WDlgrVe2v0NCuhwmbD7ETnS5y6nT0AHXndEy8B+Ym+eeED+3UUklfYZad04DSj3RKQf9YtOfmKXcL7MGHaEH/DVR22gaq8+l6tz62dOeHk2yzGBXfNXqFeuAaHhWngkDu37oFEd7rCbks+Kwge8GuZfhYw3V1IJss7mZqXScwE9ahchtAjMNstrN1KJbkK35z/facdWtNU5m6xH4lXuWV2yzgQfAbzGFEu567l0xinl4rOHxW9XBG2bF2FLQZ6etxjQQJh2yHqzji3ppnPvTYzYC4VX1uasWA1Wjq05DgW5WDqeJpO7m2KES9jB99xrW8A"
+      }
+    },
+    {
+      "hostType": "dockerfile",
+      "matchHost": "https://ghcr.io/plhw",
+      "username": "basz",
+      "encrypted": {
+        "token": "wcFMA7CNLw51im1DARAAxm+4RZSo3/I0rIwfNeL4SdYUHEf8OyQad5EAA4eplWsxcoRoWQWDGKcOOjZZ1fxpIuaX9E+lUsvGqE5jV7mtBWyK80CC9plfOd+oLfagD8bjDuiMaNzxj5ZVxukzWTgW72N0zQ62dFKzHqRmKGbgaFgYX+/Re4x3gcOJ3sWShUY41uUIRWPgX8HCJhtViM1bYvdndsuR8+1MpaW6BobK8xtkTeZeCN/Otfa2CFPBv/+gvLS8fzqd7o9Ybupd4nQRRcpt4sHUXLYURbzGRaIOIl1bGiBESrrgtxfGc26FZcUIEssQPOXzYYObSaDysapD6msGqgEBm2Bl7owrKFX9PD3HzGQiG1M/K8YZk6M1LF9DTRtqtvi93VKW8ABH5DVQxTVNy7JowI3vc/0TmOr9G5roqJ/XUPQenF24XDho6iKoYp/Pd7SscvgKiUJzQnzya5REb32vVTPUm/0Ejy2JnuKXiFg79qq7ONMhQAUsnwwz1LKbQ8ptZKPvzUwBFWFg93r39WDlgrVe2v0NCuhwmbD7ETnS5y6nT0AHXndEy8B+Ym+eeED+3UUklfYZad04DSj3RKQf9YtOfmKXcL7MGHaEH/DVR22gaq8+l6tz62dOeHk2yzGBXfNXqFeuAaHhWngkDu37oFEd7rCbks+Kwge8GuZfhYw3V1IJss7mZqXScwE9ahchtAjMNstrN1KJbkK35z/facdWtNU5m6xH4lXuWV2yzgQfAbzGFEu567l0xinl4rOHxW9XBG2bF2FLQZ6etxjQQJh2yHqzji3ppnPvTYzYC4VX1uasWA1Wjq05DgW5WDqeJpO7m2KES9jB99xrW8A"
+      }
+    }
+  ]
+}
