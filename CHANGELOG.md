@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/plhw/hf-api-client/compare/v2.4.0...v3.0.0) (2023-09-05)
+
 ## [2.4.0](https://github.com/plhw/hf-api-client/compare/v2.3.1...v2.4.0) (2021-06-29)
 
 
