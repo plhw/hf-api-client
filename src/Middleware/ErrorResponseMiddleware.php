@@ -6,13 +6,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see       https://plhw.nl/
+ * @see https://plhw.nl/
  *
- * @copyright Copyright (c) 2010 - 2021 bushbaby multimedia. (https://bushbaby.nl)
- * @author    Bas Kamer <baskamer@gmail.com>
- * @license   Proprietary License
+ * @copyright Copyright (c) 2010 bushbaby multimedia. (https://bushbaby.nl)
+ * @author Bas Kamer <baskamer@gmail.com>
+ * @license Proprietary License
  *
- * @package   plhw/hf-api-client
+ * @package plhw/hf-api-client
  */
 
 declare(strict_types=1);
@@ -59,18 +59,18 @@ class ErrorResponseMiddleware
         $stack = $content['stack'] ?? null;
 
         switch ($response->getStatusCode()) {
-//            case StatusCodeInterface::STATUS_UNPROCESSABLE_ENTITY:
-//                throw GatewayException::error("Unprocessble Entity",$detail);
-//            case StatusCodeInterface::STATUS_NOT_FOUND:
-//                throw GatewayException::error("Not Found",$detail);
+            //            case StatusCodeInterface::STATUS_UNPROCESSABLE_ENTITY:
+            //                throw GatewayException::error("Unprocessble Entity",$detail);
+            //            case StatusCodeInterface::STATUS_NOT_FOUND:
+            //                throw GatewayException::error("Not Found",$detail);
             case StatusCodeInterface::STATUS_UNAUTHORIZED:
                 throw new \Exception('Unauthorized (401)');
-//            case StatusCodeInterface::STATUS_FORBIDDEN:
-//                throw new \Exception;
-//            case StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR:
-//                throw GatewayException::error("Internal Server Error", $detail);
-//            default:
-//                throw new \Exception((string) $response->getBody());
+                //            case StatusCodeInterface::STATUS_FORBIDDEN:
+                //                throw new \Exception;
+                //            case StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR:
+                //                throw GatewayException::error("Internal Server Error", $detail);
+                //            default:
+                //                throw new \Exception((string) $response->getBody());
         }
     }
 }

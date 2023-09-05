@@ -6,13 +6,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see       https://plhw.nl/
+ * @see https://plhw.nl/
  *
- * @copyright Copyright (c) 2010 - 2021 bushbaby multimedia. (https://bushbaby.nl)
- * @author    Bas Kamer <baskamer@gmail.com>
- * @license   Proprietary License
+ * @copyright Copyright (c) 2010 bushbaby multimedia. (https://bushbaby.nl)
+ * @author Bas Kamer <baskamer@gmail.com>
+ * @license Proprietary License
  *
- * @package   plhw/hf-api-client
+ * @package plhw/hf-api-client
  */
 
 declare(strict_types=1);
@@ -28,7 +28,7 @@ require_once __DIR__ . '/../setup.php';
 try {
     $results = $api->dossier_queryDossiers(
         Query::create()
-            //->withIncluded('orders') // include releationships dossier.orders (resource "dossier/order")
+            // ->withIncluded('orders') // include releationships dossier.orders (resource "dossier/order")
         //    ->withFilter('query', 'Bas') // filter by on dossier.name.givenname or dossier.name.familyname
             // ->withFilter('query', 'nnn') // filter by on dossier.dossierNumber if query is numeric
       //      ->withFilter('status', 'opened') // sort order.status (opened, archived, deleted)
@@ -51,6 +51,6 @@ try {
         \dump($results);
 
         // or do something with $api->cachesResources (which contains a (flattened) array of json-api resources by resource type type)
-        //\dump($api->cachedResources);
+        // \dump($api->cachedResources);
     }
 }

@@ -6,13 +6,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see       https://plhw.nl/
+ * @see https://plhw.nl/
  *
- * @copyright Copyright (c) 2010 - 2021 bushbaby multimedia. (https://bushbaby.nl)
- * @author    Bas Kamer <baskamer@gmail.com>
- * @license   Proprietary License
+ * @copyright Copyright (c) 2010 bushbaby multimedia. (https://bushbaby.nl)
+ * @author Bas Kamer <baskamer@gmail.com>
+ * @license Proprietary License
  *
- * @package   plhw/hf-api-client
+ * @package plhw/hf-api-client
  */
 
 declare(strict_types=1);
@@ -28,13 +28,13 @@ require_once __DIR__ . '/../setup.php';
 try {
     $results = $api->dossier_queryOrders(
         Query::create()
-            //->withIncluded('dossier') // include releationships order.dossier (resource "dossier/dossier")
-            //->withFilter('query', 'nnnnn') // filter by on dossier.dossierNumber
-            //->withFilter('query', 'nnn.') // filtered by customer.accountNumber
-            //->withFilter('query', 'nnn.nnn') // filtered by order.orderNumber
+            // ->withIncluded('dossier') // include releationships order.dossier (resource "dossier/dossier")
+            // ->withFilter('query', 'nnnnn') // filter by on dossier.dossierNumber
+            // ->withFilter('query', 'nnn.') // filtered by customer.accountNumber
+            // ->withFilter('query', 'nnn.nnn') // filtered by order.orderNumber
             ->withFilter('status', 'opened') // sort order.status (OPENED, ARCHIVED, DELETED)
             ->withFilter('orderStatus', 'cad') // sort order.orderStatus (inception, placed, rejected, accepted, cad, cam, production, shipment)
-            //->withSort('accountNumber', false) // sort order.accountNumber descending
+            // ->withSort('accountNumber', false) // sort order.accountNumber descending
             ->withPage(1, 10)
     );
 } catch (ClientException $e) {

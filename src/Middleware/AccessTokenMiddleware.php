@@ -6,13 +6,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see       https://plhw.nl/
+ * @see https://plhw.nl/
  *
- * @copyright Copyright (c) 2010 - 2021 bushbaby multimedia. (https://bushbaby.nl)
- * @author    Bas Kamer <baskamer@gmail.com>
- * @license   Proprietary License
+ * @copyright Copyright (c) 2010 bushbaby multimedia. (https://bushbaby.nl)
+ * @author Bas Kamer <baskamer@gmail.com>
+ * @license Proprietary License
  *
- * @package   plhw/hf-api-client
+ * @package plhw/hf-api-client
  */
 
 declare(strict_types=1);
@@ -87,16 +87,16 @@ class AccessTokenMiddleware
             // try to get a token from the cache
             $accessToken = $this->cache->getItem($cacheKey, $success);
 
-            if (null === $accessToken || ! $success || $accessToken->hasExpired()) {
+            if (null === $accessToken || ! $success || \unserialize($accessToken)->hasExpired()) {
                 // try to get a new access token
                 $accessToken = $provider->getAccessToken($grant, [
                     'scope' => $scope,
                 ]);
-
+                $accessToken = \serialize($accessToken);
                 $this->cache->setItem($cacheKey, $accessToken);
             }
 
-            $this->accessToken = $accessToken;
+            $this->accessToken = \unserialize($accessToken);
         }
 
         return $this->accessToken;

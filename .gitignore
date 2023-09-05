@@ -3,3 +3,4 @@ vendor/
 .idea
 composer.lock
 .hf-api-client-secrets.php
+node_modules

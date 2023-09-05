@@ -6,13 +6,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see       https://plhw.nl/
+ * @see https://plhw.nl/
  *
- * @copyright Copyright (c) 2010 - 2021 bushbaby multimedia. (https://bushbaby.nl)
- * @author    Bas Kamer <baskamer@gmail.com>
- * @license   Proprietary License
+ * @copyright Copyright (c) 2010 bushbaby multimedia. (https://bushbaby.nl)
+ * @author Bas Kamer <baskamer@gmail.com>
+ * @license Proprietary License
  *
- * @package   plhw/hf-api-client
+ * @package plhw/hf-api-client
  */
 
 declare(strict_types=1);
@@ -28,7 +28,7 @@ require_once __DIR__ . '/../setup.php';
 try {
     $results = $api->customer_queryOrderLeads(
         Query::create()
-            //->withIncluded('customer.settings') // side load customer.settings
+            // ->withIncluded('customer.settings') // side load customer.settings
             ->withPage(1, 10)
             ->withFilter('customerId', '81a526d5-9430-49b2-859e-af77a907fcd6')
             ->withFilter('practiceId', '9c491672-5052-4b04-a38d-f7ea0680f76d')

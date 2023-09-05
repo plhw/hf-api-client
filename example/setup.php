@@ -6,13 +6,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see       https://plhw.nl/
+ * @see https://plhw.nl/
  *
- * @copyright Copyright (c) 2010 - 2021 bushbaby multimedia. (https://bushbaby.nl)
- * @author    Bas Kamer <baskamer@gmail.com>
- * @license   Proprietary License
+ * @copyright Copyright (c) 2010 bushbaby multimedia. (https://bushbaby.nl)
+ * @author Bas Kamer <baskamer@gmail.com>
+ * @license Proprietary License
  *
- * @package   plhw/hf-api-client
+ * @package plhw/hf-api-client
  */
 
 declare(strict_types=1);
@@ -55,12 +55,13 @@ if (\is_dir('./data/cache')) {
 }
 
 // optional but will then use filesystem default tmp directory
-$cache = StorageFactory::factory([
-    'adapter' => [
-        'name' => 'filesystem',
-        'options' => $cacheOptions,
-    ],
-    'plugins' => ['serializer'],
-]);
-//$cache = null;
+$cache = new Laminas\Cache\Storage\Adapter\Filesystem($cacheOptions);
+//  StorageFactory::factory([
+//     'adapter' => [
+//         'name' => 'filesystem',
+//         'options' => $cacheOptions,
+//     ],
+//     'plugins' => ['serializer'],
+// ]);
+// $cache = null;
 $api = ApiClient::createClient($options, $cache);

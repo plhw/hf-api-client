@@ -17,31 +17,17 @@
     "sort-packages": true
   },
   "require": {
-    "php": "^8.0",
+    "php": "^7.4 | ^8.0",
     "beberlei/assert": "^3.3",
     "fig/http-message-util": "^1.1",
-    "laminas/laminas-cache": "^2.10.0",
+    "laminas/laminas-cache": "^3.0",
+    "laminas/laminas-cache-storage-adapter-filesystem": "^2.0",
     "laminas/laminas-http": "^2.14",
     "laminas/laminas-serializer": "^2.10",
     "league/oauth2-client": "^2.6",
     "ocramius/package-versions": "^2.1",
     "ramsey/uuid": "^4.1",
     "symfony/var-dumper": "^5.3"
-  },
-  "replace": {
-    "laminas/laminas-cache-storage-adapter-apc": "*",
-    "laminas/laminas-cache-storage-adapter-apcu": "*",
-    "laminas/laminas-cache-storage-adapter-blackhole": "*",
-    "laminas/laminas-cache-storage-adapter-dba": "*",
-    "laminas/laminas-cache-storage-adapter-ext-mongodb": "*",
-    "laminas/laminas-cache-storage-adapter-memcache": "*",
-    "laminas/laminas-cache-storage-adapter-memcached": "*",
-    "laminas/laminas-cache-storage-adapter-mongodb": "*",
-    "laminas/laminas-cache-storage-adapter-redis": "*",
-    "laminas/laminas-cache-storage-adapter-session": "*",
-    "laminas/laminas-cache-storage-adapter-wincache": "*",
-    "laminas/laminas-cache-storage-adapter-xcache": "*",
-    "laminas/laminas-cache-storage-adapter-zend-server": "*"
   },
   "require-dev": {
     "plhw/hf-cs-fixer-config": "^2.0",
