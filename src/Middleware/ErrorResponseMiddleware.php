@@ -64,7 +64,7 @@ class ErrorResponseMiddleware
 //            case StatusCodeInterface::STATUS_NOT_FOUND:
 //                throw GatewayException::error("Not Found",$detail);
             case StatusCodeInterface::STATUS_UNAUTHORIZED:
-                throw new \Exception();
+                throw new \Exception('Unauthorized (401)');
 //            case StatusCodeInterface::STATUS_FORBIDDEN:
 //                throw new \Exception;
 //            case StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR:

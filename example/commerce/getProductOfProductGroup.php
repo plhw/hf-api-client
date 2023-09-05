@@ -36,7 +36,7 @@ try {
 
     $results = $api->commerce_listCataloguesOfStore(
         Query::create()
-            ->withFilter('query', 'Sandalinos Catalogue')
+            ->withFilter('query', 'lab.PLHW Catalogue')
             ->withPage(1, 1)
             ->withParam('storeId', $storeId)
     );

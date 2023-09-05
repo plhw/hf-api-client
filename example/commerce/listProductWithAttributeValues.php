@@ -40,7 +40,7 @@ try {
 
     // now we search for a specific catalogue within that store
     $query = Query::create()
-        ->withFilter('query', 'Sandalinos Catalogue')
+        ->withFilter('query', 'lab.PLHW Catalogue')
         ->withParam('storeId', $storeId)
         ->withPage(1, 1);
 
