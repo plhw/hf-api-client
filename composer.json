@@ -27,7 +27,7 @@
     "league/oauth2-client": "^2.6",
     "ocramius/package-versions": "^2.1",
     "ramsey/uuid": "^4.1",
-    "symfony/var-dumper": "^5.3"
+    "symfony/var-dumper": "^7.0"
   },
   "require-dev": {
     "plhw/hf-cs-fixer-config": "^2.0",
